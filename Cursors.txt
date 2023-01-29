@@ -1,0 +1,85 @@
+The 3 Cursors of Java:
+ If we want to get Objects One by One from the Collection then we should go for Cursors.
+
+ There are 3 Types of Cursors Available in Java.
+1) Enumeration
+2) Iterator
+3) ListIterator
+
+1) Enumeration:
+==============
+ We can Use Enumeration to get Objects One by One from the Collection.
+ We can Create Enumeration Object by using elements().
+
+public Enumeration elements();
+
+Eg:Enumeration e = v.elements(); //v is Vector Object.
+
+Methods:
+1) public boolean hasMoreElements();
+2) public Object nextElement();
+
+
+Example:
+
+package list;
+
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class VectorDemo {
+
+	public static void main(String[] args) {
+
+		Vector v = new Vector();
+		v.add(44);
+		v.add(89);
+		v.add(33);
+		v.add(87);
+		v.add(90);
+		
+		System.out.println(v);
+		
+		Enumeration elements = v.elements();
+		
+		while(elements.hasMoreElements()) {
+			Object nextElement = elements.nextElement();
+			
+			System.out.println(nextElement);
+		}
+		
+		
+		
+		
+		
+		
+		
+	
+	}
+}	
+		
+
+
+
+
+
+
+Limitations of Enumeration:
+ Enumeration Concept is Applicable Only for Legacy Classes and it is Not a Universal
+Cursor.
+ By using Enumeration we can Perform Read Operation and we can't Perform Remove
+Operation.
+To Overcome Above Limitations we should go for Iterator.
+
+
+
+
+
+
+
+
+
+
+
+
